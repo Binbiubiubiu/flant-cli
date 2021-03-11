@@ -1,8 +1,6 @@
-import 'package:flutter/widgets.dart';
-
 class FlanIcons {
-  static const _fontFamily = "flanIcon";
+  static const fontFamily = "flanIcon";
   <% icons.forEach(function(icon){ %>
-  static const <%=icon.name%> = IconData(0x<%=icon.id%>, fontFamily: _fontFamily);
+  static const int <%=icon.name%> = 0x<%=icon.id%>;
   <% }); %>
 }

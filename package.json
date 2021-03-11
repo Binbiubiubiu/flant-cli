@@ -6,7 +6,7 @@
     "flant-generator-icons": "bin/icons.js"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "generate:icons": "node icons/index icons.less"
   },
   "keywords": [],
   "author": "",
