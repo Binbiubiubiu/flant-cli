@@ -8,7 +8,7 @@
   "scripts": {
     "dev": "webpack -c webpack.config.ts --mode development --progress --watch",
     "build": "webpack -c webpack.config.ts --mode production",
-    "generate:icons": "node bin/cli icons.less"
+    "changelog": "npx gitmoji-changelog"
   },
   "files": [
     "bin",
