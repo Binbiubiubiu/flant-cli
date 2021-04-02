@@ -1,6 +1,6 @@
 {
   "name": "flant-cli",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "flant toolkit",
   "bin": {
     "flant-cli": "bin/cli.js"
@@ -16,9 +16,13 @@
     "LICENSE",
     "package.json"
   ],
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": [
+    "flant ui",
+    "toolkit",
+    "flant"
+  ],
+  "author": "Simon-Bin<2632003786@qq.com>",
+  "license": "MIT",
   "dependencies": {
     "chalk": "^2.4.2",
     "commander": "^7.2.0",

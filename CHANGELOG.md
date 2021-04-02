@@ -1,5 +1,15 @@
 # Changelog
 
+<a name="next"></a>
+## next
+
+### Miscellaneous
+
+- 📝 changelog [[c26ead5](https://github.com/Simon-Bin/flant-cli/commit/c26ead546c55354551fcb5a265417d3484174269)]
+-  Merge pull request [#1](https://github.com/Simon-Bin/flant-cli/issues/1) from Simon-Bin/add-license-1 [[985cd56](https://github.com/Simon-Bin/flant-cli/commit/985cd569538113061865273800bae3b1ac776622)]
+-  Create LICENSE [[bc04948](https://github.com/Simon-Bin/flant-cli/commit/bc0494889402e5923f00c0adf56961830436084f)]
+
+
 <a name="0.0.1"></a>
 ## 0.0.1 (2021-04-02)
 
