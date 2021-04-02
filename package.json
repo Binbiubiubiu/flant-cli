@@ -1,18 +1,48 @@
 {
-  "name": "flant-generator",
-  "version": "1.0.0",
-  "description": "",
+  "name": "flant-cli",
+  "version": "0.0.1",
+  "description": "flant toolkit",
   "bin": {
-    "flant-generator-icons": "bin/icons.js"
+    "flant-cli": "bin/cli.js"
   },
   "scripts": {
-    "generate:icons": "node icons/index icons.less"
+    "dev": "webpack -c webpack.config.ts --mode development --progress --watch",
+    "build": "webpack -c webpack.config.ts --mode production",
+    "generate:icons": "node bin/cli icons.less"
   },
+  "files": [
+    "bin",
+    "dist",
+    "LICENSE",
+    "package.json"
+  ],
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "chalk": "^2.4.2",
-    "ejs": "^3.1.5"
-  }
+    "commander": "^7.2.0",
+    "ejs": "^3.1.5",
+    "tslib": "^2.1.0"
+  },
+  "devDependencies": {
+    "@types/ejs": "^3.0.6",
+    "@types/node": "^14.14.37",
+    "@types/webpack": "^5.28.0",
+    "@types/webpack-dev-server": "^3.11.3",
+    "ts-loader": "^8.1.0",
+    "ts-node": "^9.1.1",
+    "typescript": "^4.2.3",
+    "webpack": "^5.30.0",
+    "webpack-cli": "^4.6.0",
+    "webpack-dev-server": "^3.11.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Simon-Bin/flant-cli.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Simon-Bin/flant-cli/issues"
+  },
+  "homepage": "https://github.com/Simon-Bin/flant-cli#readme"
 }
