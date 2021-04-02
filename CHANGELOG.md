@@ -1,7 +1,11 @@
 # Changelog
 
-<a name="next"></a>
-## next
+<a name="0.0.2"></a>
+## 0.0.2 (2021-04-02)
+
+### Fixed
+
+- 🐛 修复发布bug [[ad4a9cc](https://github.com/Simon-Bin/flant-cli/commit/ad4a9cc71c3cd46ddaffd409b7716091be78f51b)]
 
 ### Miscellaneous
 
