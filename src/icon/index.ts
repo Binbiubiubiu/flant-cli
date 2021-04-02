@@ -7,7 +7,6 @@ import {
   formatIconName,
   GENERATOR_TEMPLATE,
   ICON_ID_REGEX,
-  ICON_NAME_BLACK_LIST,
   ICON_NAME_REGEX,
 } from "./utils";
 import { localFile } from "../utils";
@@ -27,8 +26,11 @@ function apply(file: string, options: any) {
   let icons: FlanIcon[] = [];
   let iconName: string;
 
+  const input = fs.createReadStream(localFile(file));
+  input.on("error", (err) => warn("找不到" + localFile(file)));
+
   const rl = readline.createInterface({
-    input: fs.createReadStream(localFile(file)),
+    input,
   });
 
   rl.on("line", function (line) {
@@ -60,7 +62,7 @@ function apply(file: string, options: any) {
 
 export default function (program: commander.Command) {
   program
-    .command("generate_icons <file>")
+    .command("generate_icons [file]")
     .alias("gi")
     .description("generate icon dart file from css file")
     .option("-o, --output <path>", "output filepath", "icons.dart")
