@@ -17,7 +17,7 @@ interface FlanIcon {
   code: string;
 }
 
-function apply(file: string, options: any) {
+export function apply(file: string, options: any) {
   if (!file) {
     warn("请选择目标文件");
     return;
@@ -38,8 +38,10 @@ function apply(file: string, options: any) {
 
     //匹配名字行
     if (ICON_NAME_REGEX.test(line)) {
-      return formatIconName(line.match(ICON_NAME_REGEX)![1]);
+      iconName = formatIconName(line.match(ICON_NAME_REGEX)![1]);
+      return;
     }
+
     //匹配icon 内容行
     if (ICON_ID_REGEX.test(line)) {
       const code = line.match(ICON_ID_REGEX)![1];
@@ -51,9 +53,10 @@ function apply(file: string, options: any) {
   });
 
   rl.on("close", function () {
-    const { familyName } = options;
+    const { familyName, output } = options;
+
     fs.writeFileSync(
-      localFile(options.output),
+      localFile(output),
       ejs.render(GENERATOR_TEMPLATE, { icons, familyName })
     );
     success("generate icons file success!!!");
